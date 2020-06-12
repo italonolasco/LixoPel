@@ -38,7 +38,14 @@ const Home = () => {
     loadPosition();
   }, []);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    async function loadTrashCans() {
+      const response = await api.get("trashcans");
+      setTrashCans(response.data);
+    }
+
+    loadTrashCans();
+  }, []);
 
   function handleSelect(trashCanSelected) {
     if (trashCanSelected === "recyclable") {
@@ -70,11 +77,23 @@ const Home = () => {
               longitudeDelta: 0.014,
             }}
           >
-            <Marker
-              coordinate={{ latitude: -31.7782765, longitude: -52.3338439 }}
-            >
-              <Image style={styles.mapMarkerImage} source={orange} />
-            </Marker>
+            {trashCans.map((trashCan) => (
+              <Marker
+                key={trashCan.id}
+                coordinate={{
+                  latitude: trashCan.latitude,
+                  longitude: trashCan.longitude,
+                }}
+              >
+                {trashCan.is_recyclable
+                  ? recyclableSelected === true && (
+                      <Image style={styles.mapMarkerImage} source={green} />
+                    )
+                  : organicSelected === true && (
+                      <Image style={styles.mapMarkerImage} source={orange} />
+                    )}
+              </Marker>
+            ))}
           </MapView>
         )}
       </View>
