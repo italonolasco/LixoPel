@@ -4,6 +4,7 @@ Aplicativo e base de dados desenvolvidos para a semana do meio ambiente, cujo in
 
 ![](iphone.png)
 ![](android.jpg)
+![](example.mp4)
 
 ### Tecnologias Utilizadas
 * React Native
