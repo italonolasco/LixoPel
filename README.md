@@ -2,7 +2,7 @@
 
 Aplicativo e base de dados desenvolvidos para a semana do meio ambiente, cujo intuito é mostrar, utilizando a API de mapa, a localização de lixeiras recicláveis e orgânicas da cidade de Pelotas.
 
-![](gif.gif) ![](image.png)
+![](video.mp4) ![](iphone.png)
 
 ### Tecnologias Utilizadas
 * React Native
