@@ -4,7 +4,7 @@ Aplicativo e base de dados desenvolvidos para a semana do meio ambiente, cujo in
 
 ![](iphone.jpg)
 ![](android.jpg)
-![](example.gif)
+![](example.gif =250x250)
 
 ### Tecnologias Utilizadas
 * React Native
